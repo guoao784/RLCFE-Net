@@ -1,4 +1,4 @@
-# DR-GELAN
+# RLCFE-Net
 
 Implementation of paper - [RLCFE-Net: A Reparameterization Large Convolutional Kernel
 Feature Extraction Network for Weed Detection in Multiple Scenarios]()
@@ -40,7 +40,7 @@ Docker environment (recommended)
 
 ``` shell
 # create the docker container, you can change the share memory size if you have more.
-nvidia-docker run --name dr-gelan -it -v your_coco_path/:/coco/ -v your_code_path/:/dr-gelan --shm-size=64g nvcr.io/nvidia/pytorch:21.11-py3
+nvidia-docker run --name RLCFE-Net -it -v your_coco_path/:/coco/ -v your_code_path/:/RLCFE-Net --shm-size=64g nvcr.io/nvidia/pytorch:21.11-py3
 
 # apt install required packages
 apt update
@@ -50,7 +50,7 @@ apt install -y zip htop screen libgl1-mesa-glx
 pip install seaborn thop
 
 # go to code folder
-cd /dr-gelan
+cd /RLCFE-Net
 ```
 
 </details>
@@ -61,7 +61,7 @@ cd /dr-gelan
 
 ``` shell
 # evaluate dr-gelan models
-# python val.py --data data/mycoco128.yaml --img 640 --batch 32 --conf 0.001 --iou 0.7 --device 0 --weights './gelan-c.pt' --save-json --name gelan_c_640_val
+# python val.py --data data/mycoco128.yaml --img 640 --batch 4 --conf 0.001 --iou 0.7 --device 0 --weights './RLCFE-Net-c.pt' --save-json --name RLCFE-Net_c_640_val
 ```
 
 
@@ -78,15 +78,15 @@ bash scripts/get_coco.sh
 Single GPU training
 
 ``` shell
-# train dr-dr-gelan models
-# python train.py --workers 8 --device 0 --batch 32 --data data/mycoco128.yaml --img 640 --cfg models/detect/dr-gelan-c.yaml --weights '' --name dr-gelan-c --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
+# train RLCFE-Net models
+# python train.py --workers 8 --device 0 --batch 4 --data data/mycoco128.yaml --img 640 --cfg models/detect/RLCFE-Net-c.yaml --weights '' --name RLCFE-Net-c --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
 ```
 
 Multiple GPU training
 
 ``` shell
-# train dr-gelan models
-# python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 8 --device 0,1,2,3 --sync-bn --batch 128 --data data/mycoco128.yaml --img 640 --cfg models/detect/dr-gelan-c.yaml --weights '' --name gelan-c --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
+# train RLCFE-Net models
+# python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 8 --device 0,1,2,3 --sync-bn --batch 128 --data data/mycoco128.yaml --img 640 --cfg models/detect/RLCFE-Net-c.yaml --weights '' --name RLCFE-Net-c --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
 ```
 
 
@@ -99,9 +99,10 @@ Under construction.
 
 ```
 1:@article{
-  title={Weed Detection Model Based on Improved GELAN and Construction of Multi-Scene Weed Dataset},
-  author={Ao Guo, Sensen Song, Zhenhong Jia, Jianyi Wang, Jiajia Wang and Gang Zhou},
-  journal={2025 IEEE International Conference on Acoustics, Speech, and Signal Processing},
+  title={RLCFE-Net: A Reparameterization Large Convolutional Kernel
+Feature Extraction Network for Weed Detection in Multiple Scenarios},
+  author={Ao Guo, Zhenhong Jia, Baoquan Ge, Wei Chen, Sensen Song, Congbing He, Gang Zhou, Jiajia Wang, Xiaoyi Lv},
+  journal={Journal of Advanced Research},
   year={2024}
 }
 ```
@@ -149,7 +150,7 @@ Parts of code of [A lightweight weed detection model with global contextual join
 
 <details><summary> <b>Expand</b> </summary>
     
-* [https://github.com/guoao784/DR-GELAN](https://github.com/guoao784/DR-GELAN)
+* [https://github.com/guoao784/DR-GELAN](https://github.com/guoao784/RLCFE-Net)
 * [https://github.com/guoao784/Sixweeds](https://github.com/guoao784/Sixweeds)
 * [https://github.com/guoao784/LW-YOLOv8](https://github.com/guoao784/LW-YOLOv8)
 * [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
