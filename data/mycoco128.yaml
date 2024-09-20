@@ -1,0 +1,49 @@
+# Ultralytics YOLO 🚀, GPL-3.0 license
+# COCO128 dataset https://www.kaggle.com/ultralytics/coco128 (first 128 images from COCO train2017) by Ultralytics
+# Example usage: yolo train data=coco128.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco128  ← downloads here (7 MB)
+
+#path: "F:\\Data set\\mydata\\data\\ab_label\\dataset"  # 数据集根目录
+path: "E:\\Weed\\dataset"  # 数据集根目录
+train: "images\\train"  # 训练图像目录（相对于 'path'）128张图像
+val: "images\\val"  # 验证图像目录（相对于 'path'）128张图像
+test: "images\\test"
+nc: 6
+names: [ 'Solanum nigrum','Alhagi sparsifolia','Chenopodium','Purslane','Amaranthus','Convolvulus']
+
+#path: "E:\\yolo\\yolov7-main\\yolov7-main\\datasets1"
+#train: "train\\images"  # 训练图像目录（相对于 'path'）128张图像
+#val: "val\\images"  # 验证图像目录（相对于 'path'）128张图像
+#test: "test\\images"
+#nc: 4
+#names: [ 'ragweed','pigweed', 'cocklebur','foxtail']
+
+#names:
+  #0: Solanum nigrum
+  #1: Alhagi sparsifolia
+  #2: Chenopodium
+  #3: Purslane
+
+#names: [ 'Amaranthus','Convolvulus']
+#names: [ 'Solanum nigrum','Alhagi sparsifolia']
+#names: [ 'Chenopodium','Purslane']
+
+#path: "F:\\Data set\\CottonWeedDet12\\dataset"
+#train: "images\\train"  # 训练图像目录（相对于 'path'）128张图像
+#val: "images\\val"  # 验证图像目录（相对于 'path'）128张图像
+#test: "images\\test"
+#nc: 12
+##names: ['0','1', '2','3','4','5','6','7','8','9','10','11']
+#names: [ 'Waterhemp','Morninglory','Purslane','SpottedSpurge','Carpetweed','Ragweed','Eclipta','PricklySida','PalmerAmaranth','Sicklepod','Goosegrass','CutleafGroundcherry']
+
+#path: "E:\\yolo\\yolov7-main\\yolov7-main\\datasets"  # 数据集根目录
+#train: "images\\train"  # 训练图像目录（相对于 'path'）128张图像
+#val: "images\\val"  # 验证图像目录（相对于 'path'）128张图像
+#test: "images\\test"
+#nc: 25
+#names: ['abutilon theophrasti', 'Alligatorweed','Asiatic_Smartweed', 'barnyard_grass', 'Bidens pilosa', 'billygoat_weed', 'Black_nightshade', 'Ceylon spinach',
+#               'Chinese_knotweed', 'cocklebur', 'Common Dayflower', 'crabgrass', 'field_thistle', 'green_foxtail','horseweed', 'goosefoots', 'Mock_strawberry', 'Indian aster', 'pigweed', 'plantain',
+#               'purslane', 'sedge', 'Shepherd_Purse', 'Viola', 'white_smart_weed']
