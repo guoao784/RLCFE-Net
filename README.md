@@ -1,10 +1,10 @@
-# YOLOv9
+# DR-GELAN
 
 Implementation of paper - [Weed Detection Model Based on Improved GELAN and Construction of Multi-Scene Weed Dataset]()
 
 <div align="center">
     <a href="./">
-        <img src="./figure/performance1.png" width="79%"/>
+        <img src="./figure/fig1.png" width="79%"/>
     </a>
 </div>
 
@@ -65,7 +65,7 @@ Data preparation
 bash scripts/get_coco.sh
 ```
 
-* Download [Sixweeds dataset](https://1drv.ms/f/c/2c26dd98ea3fe7e6/EpWXO7qi4jVOifWg7Fe6NqEBrjLYy4ybnRwojXC6nU7-sA?e=iLg4KL) images and labels.
+*Download [Sixweeds dataset](https://github.com/guoao784/Sixweeds) images and labels.
 
 Single GPU training
 
@@ -135,13 +135,15 @@ https://doi.org/10.1016/j.engappai.2024.108903
 
 Parts of code of [A lightweight weed detection model with global contextual joint features](https://doi.org/10.1016/j.engappai.2024.108903) and [Learning What You Want to Learn Using Programmable Gradient Information](https://arxiv.org/abs/2402.13616) are released in the repository.
 
+
+
 ## Acknowledgements
 
 <details><summary> <b>Expand</b> </summary>
-
-* [https://github.com/guoao784/DR-GELAN)
-* [https://github.com/guoao784/Sixweeds)
-* [https://github.com/guoao784/LW-YOLOv8)
+    
+* [https://github.com/guoao784/DR-GELAN](https://github.com/guoao784/DR-GELAN)
+* [https://github.com/guoao784/Sixweeds](https://github.com/guoao784/Sixweeds)
+* [https://github.com/guoao784/LW-YOLOv8](https://github.com/guoao784/LW-YOLOv8)
 * [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
 * [https://github.com/WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
 * [https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
