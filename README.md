@@ -1,7 +1,6 @@
 # RLCFE-Net
 
-Implementation of paper - [RLCFE-Net: A Reparameterization Large Convolutional Kernel
-Feature Extraction Network for Weed Detection in Multiple Scenarios]()
+Implementation of paper - [RLCFE-Net: A Reparameterization Large Convolutional Kernel Feature Extraction Network for Weed Detection in Multiple Scenarios]()
 
 <div align="center">
     <a href="./">
