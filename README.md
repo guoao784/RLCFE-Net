@@ -149,7 +149,7 @@ Parts of code of [A lightweight weed detection model with global contextual join
 
 <details><summary> <b>Expand</b> </summary>
     
-* [https://github.com/guoao784/DR-GELAN](https://github.com/guoao784/RLCFE-Net)
+* [https://github.com/guoao784/RLCFE-Net](https://github.com/guoao784/RLCFE-Net)
 * [https://github.com/guoao784/Sixweeds](https://github.com/guoao784/Sixweeds)
 * [https://github.com/guoao784/LW-YOLOv8](https://github.com/guoao784/LW-YOLOv8)
 * [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
